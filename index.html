@@ -1,0 +1,21 @@
+<html ng-app="pkmn.sm.prng">
+
+<head>
+    <title>Pokemon Sun/Moon Egg RNG Tool</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.4.0/ui-bootstrap-tpls.min.js"></script>
+    <script src="app.js"></script>
+    <script src="component.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body ng-controller="AppController as vm">
+    <div class="container">
+        <div class="row">
+            <h4>{{vm.message}}</h4>
+        </div>
+        <pkm-parent-input></pkm-parent-input>
+    </div>
+</body>
+
+</html>
