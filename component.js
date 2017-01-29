@@ -2,7 +2,11 @@ angular.module('pkmn.sm.prng')
     .component('pkmParentInput', {
         templateUrl: 'pkm-parent-input.html',
         controller: function PkmParentInputController() {
-            this.male = {};
+            this.male = {
+                Item: 'NONE',
+                Nature: 'DOCILE',
+                AbilitySlot: '1',
+            };
             this.male.IV = {
                 HP: 31,
                 Att: 31,
@@ -12,7 +16,11 @@ angular.module('pkmn.sm.prng')
                 Spd: 31
             };
 
-            this.female = {};
+            this.female = {
+                Item: 'NONE',
+                Nature: 'DOCILE',
+                AbilitySlot: '1',
+            };
             this.female.IV = {
                 HP: 31,
                 Att: 31,
@@ -40,6 +48,16 @@ angular.module('pkmn.sm.prng')
                 "Dragon",
                 "Dark",
             ];
+
+            this.natures = ["HARDY", "LONELY", "BRAVE", "ADAMANT", "NAUGHTY", "BOLD", "DOCILE",
+                "RELAXED", "IMPISH", "LAX", "TIMID", "HASTY", "SERIOUS", "JOLLY",
+                "NAIVE", "MODEST", "MILD", "QUIET", "BASHFUL", "RASH", "CALM",
+                "GENTLE", "SASSY", "CAREFUL", "QUIRKY"
+            ];
+
+            this.itemSelections = ["NONE", "DESTINYKNOT", "EVERSTONE"];
+            this.abilitySlots = ["1", "2", "HA"];
+
 
             function lsb(num) {
                 return num % 2;
